@@ -5,7 +5,7 @@ import CreateStudent from "../pages/admin/CreateStudent";
 import { NavLink } from "react-router-dom";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 
-type TRoute = { path: string; element: ReactNode };
+// type TRoute = { path: string; element: ReactNode };
 
 type TSidebarItems = {
   key: string;
@@ -65,27 +65,27 @@ export const adminSidebars = adminPaths.reduce((acc: TSidebarItems[], item) => {
   return acc; // Ensures the accumulator is returned
 }, []); // Initialize the accumulator as an empty array
 
-export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) => {
-  if (item.path && item.element) {
-    acc.push({
-      path: item.path,
-      element: item.element,
-    });
-  }
+// export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) => {
+//   if (item.path && item.element) {
+//     acc.push({
+//       path: item.path,
+//       element: item.element,
+//     });
+//   }
 
-  if (item.children) {
-    item.children.forEach((child) => {
-      if (child.path && child.element) {
-        acc.push({
-          path: child.path,
-          element: child.element,
-        });
-      }
-    });
-  }
+//   if (item.children) {
+//     item.children.forEach((child) => {
+//       if (child.path && child.element) {
+//         acc.push({
+//           path: child.path,
+//           element: child.element,
+//         });
+//       }
+//     });
+//   }
 
-  return acc;
-}, []);
+//   return acc;
+// }, []);
 
 // export const adminPaths = [
 //   {
