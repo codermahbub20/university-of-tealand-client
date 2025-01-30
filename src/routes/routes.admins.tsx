@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import CreateAdmin from "../pages/admin/CreateAdmin";
-import CreateFaculty from "../pages/admin/CreateFaculty";
-import CreateStudent from "../pages/admin/CreateStudent";
+import CreateAdmin from "../pages/admin/UserManagement/CreateAdmin";
+import CreateFaculty from "../pages/admin/UserManagement/CreateFaculty";
+import CreateStudent from "../pages/admin/UserManagement/CreateStudent";
 import { NavLink } from "react-router-dom";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import AcademicSemester from "../pages/admin/academicManagment/AcademicSemester";
@@ -10,6 +10,7 @@ import CreateAcademicFaculty from "../pages/admin/academicManagment/CreateAcadem
 import AcademicFaculty from "../pages/admin/academicManagment/AcademicFaculty";
 import CreateAcademicDepartment from "../pages/admin/academicManagment/CreateAcademicDepartment";
 import AcademicDepartment from "../pages/admin/academicManagment/AcademicDepartment";
+import StudentData from "../pages/admin/UserManagement/StudentData";
 
 // type TRoute = { path: string; element: ReactNode };
 
@@ -67,6 +68,11 @@ export const adminPaths = [
         name: "Create Student",
         path: "create-student",
         element: <CreateStudent />,
+      },
+      {
+        name: "Students's",
+        path: "student-data",
+        element: <StudentData />,
       },
       {
         name: "Create Faculty",
